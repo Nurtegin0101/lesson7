@@ -68,10 +68,9 @@ public class MainActivity extends AppCompatActivity {
        }
        break;
             case R.id.plus_and_m:
-                  if(print.getText().toString().contains("0")){
+                  if(print.getText().equals("0")){
                 return;
-            } else
-                if(print.getText().toString().contains("+")){
+            } else if(print.getText().toString().contains("+")){
                     print.setText(print.getText().toString().replace("+","-"));
 
         } else if(print.getText().toString().contains("-")){
