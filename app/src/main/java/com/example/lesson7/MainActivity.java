@@ -149,15 +149,18 @@ public class MainActivity extends AppCompatActivity {
         }
 }
     private  void saveNumber (String oper){
+        print.setText(print.getText().toString().replace("=", ""));
         first =Double.parseDouble(print.getText().toString());
         operationClick = true ;
         operation = oper ;
     }
     private  void isOver (){
         if (is%1==0) {
-            print.setText(String.valueOf(Math.round(is)));
+            print.setText("=" +String.valueOf(Math.round(is)));
+
         } else {
-            print.setText(is.toString());
+            print.setText("="+is.toString());
+
         }
     }
 
